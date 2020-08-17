@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>Cadastrar</title>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="deletar.js"></script>
+</head>
+
+<body>
+<div id="main" >
+	       <div id="logo">
+		      <div class="logo_imagem"><a href="index.php"><img src="logo.png" height="40" width="65"></a></div>
+		    <div class="logo_texto"><h2>Sistema Economia Domestica</h2></div>
+		    <div  class="logo_menu">1.7</div>
+	       </div>
+
+    <div id="central">
+    
+           <div id="barra_lateral">
+            <div class="barra_lateral_links">
+             
+            	  <ul>
+                 
+                  <li><h2><a href="cadastrar.html">Cadastrar</a></h2></li>
+                  <li><h2><a href="index.php">Listar</a></h2></li>
+                  <li><h2><a href="index.php">Incluir</a></h2> </li>
+                  <li><h2><a href="deletar.html">Deletar</a></h2>    </li>
+                  </ul>
+
+
+
+
+            </div>
+
+         
+
+           </div>
+
+           <div id="barra_central_cima"></div>
+
+           <div id="barra_central">
+             
+             
+            <div class="formulario_botao">
+            
+               
+            
+
+            </div>
+
+            <div  onclick="calcular_resultado()"   class="formulario_campo">
+           
+              <br><br>
+                <input type="text" name="deletar" id="deletar"   onfocus="limpar_resultado()"><br><br>
+                 
+                 <input   type="button" name="botao" value="DELETAR" id="btn"  > 
+                 <br><br>
+                 <input type="text" name="res" id="res" style="color: red" readonly="true"><br><br>
+              
+              
+              
+              
+
+            </div>
+           
+
+
+           </div>
+
+    </div>
+     
+ </div>
+
+
+
+
+
+</body>
+</html>

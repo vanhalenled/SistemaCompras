@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>Cadastrar</title>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="script1.js"></script>
+</head>
+
+<body>
+<div id="main" >
+	       <div id="logo">
+		      <div class="logo_imagem"><a href="index.php"><img src="logo.png" height="40" width="65"></a></div>
+		    <div class="logo_texto"><h2>Sistema Economia Domestica</h2></div>
+		    <div  class="logo_menu">1.7</div>
+	       </div>
+
+    <div id="central">
+    
+           <div id="barra_lateral">
+            <div class="barra_lateral_links">
+             
+            	  <ul>
+                 
+                  <li><h2><a href="cadastrar.html">Cadastrar</a></h2></li>
+                  <li><h2><a href="index.php">Listar</a></h2></li>
+                  <li><h2><a href="index.php">Incluir</a></h2> </li>
+                  <li><h2><a href="deletar.html">Deletar</a></h2>    </li>
+                  </ul>
+
+
+
+
+            </div>
+
+         
+
+           </div>
+
+           <div id="barra_central_cima"></div>
+
+           <div id="barra_central">
+             
+             
+            <div class="formulario_botao">
+              <label>Data da Compra</label><br><br>
+              <label>Comercio</label><br><br>
+                <label>Setor</label><br><br>
+                  <label>Produto</label><br><br>
+                  <label>Marca</label><br><br>
+                  <label>Quantidade</label><br><br>
+                  <label>Preço Kg</label><br><br>
+                  <label>Preço Unit</label><br><br>
+                  <label>Valor Total</label><br><br>
+
+            </div>
+
+            <div  onclick="calcular_resultado()"   class="formulario_campo">
+              <input type="date" name="dataDaCompra" id="dataDaCompra"><br><br>
+               <select name="comercio" id="comercio" required>
+                 <option value="CARREFOUR">CARREFOUR</option>
+                 <option value="SHOPPING BUTANTA">SHOPPING BUTANTA</option>
+                   <option value="SHOPPING ELDORADO">SHOPPING ELDORADO</option>
+                  <option value="SHOPPING TABOAO">SHOPPING TABOAO</option>
+                   <option value="SHOPPING MORUMBI">SHOPPING MORUMBI</option>
+                    <option value="SHOPPING CAMPO LIMPO">SHOPPING CAMPO LIMPO</option>
+                     <option value="SHOPPING LARGO TREZE SANTO AMARO">SHOPPING LARGO TREZE SANTO AMARO</option>
+                 <option value="DIA">DIA</option>
+                 <option value="SACOLAO DO VITOR">SACOLAO DO VITOR</option>
+                   <option value="SACOLAO STA EDUARDO">SACOLAO STA EDUARDO</option>
+                      <option value="SACOLAO DOM JOSE">SACOLAO DOM JOSE</option>
+                       <option value="CASA DE RACAO DO VAZAME">CASA DE RACAO DO VAZAME</option>
+                 <option value="MERCADO OLIVEIRAS">OLIVEIRAS</option>
+                     <option value="CONSULADO DO ROCK">CONSULADO DO ROCK</option>
+                  <option value="TELHA NORTE">TELHA NORTE</option>
+                   <option value="C & C">C & C</option>
+                    <option value="LEROY MERLIN">LEROY MERLIN</option>
+                     <option value="KACULA">KACULA</option>
+                      <option value="BEIRA ALTA">BEIRA ALTA</option>
+                        <option value="SORVETERIA OGGI">SORVETERIA OGGI</option>
+                          <option value="MATERIAL DE CONSTRUCAO TERENOS">MATERIAL DE CONSTRUÇÃO TERENOS</option>
+                            <option value="SALGATERIA DO VAZAME">SALGATERIA DO VAZAME</option>
+                       <option value="COBASI">COBASI</option>
+                        <option value="ATACADAO">ATACADAO</option>
+                         <option value="ASSAI">ASSAI</option>
+                          <option value="PADARIA MACEDO´S">PADARIA MACEDO´S</option>
+                           <option value="FONECAR">FONECAR</option>
+                           <option value="BIG">BIG</option>
+                              <option value="MINA ALTA">MINA ALTA</option>
+                               <option value="DROGARIA SAO PAULO">DROGARIA SAO PAULO</option>
+                                <option value="DROGASIL">DROGASIL</option>
+                                 <option value="BIFARMA">BIFARMA</option>
+                                  <option value="BURGUER KING">BURGUER KING</option>
+                                   <option value="MC DONALDS">MC DONALDS</option>
+                                    <option value="RAGAZZO">RAGAZZO</option>
+                                     <option value="HABIBS">HABIBS</option>
+                                     <option value="AMERICANAS">AMERICANAS</option>
+                                       <option value="MR PRETZEL">MR PRETZEL</option>
+                                     <option value="PIZZA HUT">PIZZA HUT </option>
+                                       <option value="LIG LIG">LIG LIG </option>
+                                       <option value="SABESP">SABESP</option>
+                                       <option value="ENEL">ENEL</option>
+                                       <option value="SEGURO DO CARRO">SEGURO DO CARRO</option>
+                                       <option value="UDEMY">UDEMY</option>
+                                       <option value="RESTAURANTE OU COMIDA SEM NOME">RESTAURANTE OU COMIDA SEM NOME</option>
+                                         <option value="MANIA DE CHURRASCO PRIME">MANIA DE CHURRASCO PRIME</option>
+                                           <option value="POSTO NEW">POSTO NEW</option>
+                                             <option value="POSTO IPIRANGA">POSTO IPIRANGA</option>
+                                               <option value="POSTO PETROBRAS">POSTO PETROBRAS</option>
+                                                 <option value="POSTO SHELL">POSTO SHELL</option>
+              </select>
+              <br><br>
+                <input type="text" name="setor" id="setor" onfocus="limpar_resultado()"><br><br>
+                 <input type="text" name="produto" id="produto" ><br><br>
+
+                 <input type="text" name="marca" id="marca"><br><br>
+                 <input type="text" name="quantidade" id="quantidade" ><br><br>
+                  <input type="text" name="precoKg" id="precoKg"><br><br>
+                   <input type="text" name="precoUnidade" id="precoUnidade" onfocus="validar_data_compra()"><br><br>
+                   <input type="text" name="valorTotal" id="valorTotal"><br><br>
+                 <input   type="button" name="botao" value="Cadastrar" id="btn"  > 
+                 <br><br>
+                 <input type="text" name="res" id="res" style="color: red" readonly="true"><br><br>
+              
+              
+              
+              
+
+            </div>
+           
+
+
+           </div>
+
+    </div>
+     
+ </div>
+
+
+
+
+
+</body>
+</html>
